@@ -36,7 +36,7 @@ namespace eastl
 		// When that flag is used all string builtins and C Standard Library functions are not usable.
 		constexpr bool UseNativeWideChar()
 		{
-#if defined(EA_COMPILER_MSVC)
+#if defined(EA_PLATFORM_WINDOWS)
 			return true; // Irrelevant flag for windows.
 #elif defined(EA_PLATFORM_SONY) && defined(EA_PLATFORM_POSIX) && defined(EA_PLATFORM_CONSOLE)
 			return true; // Sony consoles use short wchar_t disregarding the flag.
